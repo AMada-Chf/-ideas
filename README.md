@@ -18,3 +18,19 @@ data taken from : DATA.GOV
 - https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 - dataset downloaded from Data.gov relating to Crime Data from 2020 to Present by the Los Angeles Police Department (LAPD)
 - This is a draft code, the code and model need to be improved. In fact, forecasting performances are very low
+
+      sub file : crimini_3_ottimizzazione.py
+       - same code in which I included an optimization of a parameter of the chosen model, namely Logistic Regression to increase performance
+
+      sub file : Crimini_4_confrontoModelliML
+       in this file I tried to compare 3 different classification models:
+       -logistic Regression 
+       -KNeighborsRanking
+       -DecisionTreeClassifier
+
+       to see if the low performance problem was due to the algorithm used,
+        but not having found a good match, I will go back to clean the data in a better way.
+           In the next files I will handle missing values ​​with imputation and probably perform a balancing of the dataset, because some classes have a significantly lower 
+           number of observations than others, and the model is not able to predict them
+  
+
