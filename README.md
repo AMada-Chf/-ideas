@@ -50,7 +50,14 @@ data taken from : DATA.GOV
              Per victim Descent le possibili scelte , dove nan, - le inputo come no Vict
               data['Victim Sex'].fillna('no Vict', inplace=True)
               data['Victim Sex'].replace('-', 'no Vict', inplace=True)
+
               
-  
+  file : crimini_5_Bilanciamento_giusto.py
+
+  * abbiamo apportato le imputazioni ma le performance sono rimaste basse
+  * ora faremo due cose :
+      - 1) preprocessing dei dati : ( dimensionality reduction + Data Pruning )
+           ovvero ridurre il numero di features e il numero di osservazioni rindondanti
+      -2) una volta fatto andremo a riprovare ad utilizzare una tecnica di Bilnciamneto di Over-sampling come SMOTE 
   
 
