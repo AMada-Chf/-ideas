@@ -1,6 +1,6 @@
 **file : crimini_2_ispezioneDataset.py**
 
-objective: predict the type of crime that was committed based on the features. data taken from : DATA.GOV
+**objective**: predict the type of crime that was committed based on the features. data taken from : DATA.GOV
 
 https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
@@ -53,3 +53,31 @@ data preprocessing: (dimensionality reduction + Data Pruning)  reducing the numb
 
 - fixed printing errors
 decided to use another ML model more appropriate for datasets with high dimensionality and numerous observations called LIGHTGBM, the performance improved slightly.
+
+**FINAL CONSIDERATIONS FROM CLASSIFICATION REPORT UPLOADED "final_Considerations_Crimini_6"**
+
+**Classification Report Overview**
+**Precision**: Proportion of true positives among predicted positives. Measures accuracy of positive predictions.
+**Recall**: Proportion of true positives captured among actual positives. Measures ability to find all positives.
+**F1-score**: Harmonic mean of precision and recall. Useful for balance between precision and recall.
+**Support**: Number of actual occurrences of each class in the test set.
+
+the unique class well predicted is MVT ( Motor Vehicle Theft ) 
+
+**MVT**
+
+- Precision: 0.80 – 80% of predicted MVT cases are correct.
+- Recall: 0.99 – 99% of actual MVT cases were correctly identified.
+- F1-score: 0.89 – Strong performance in balancing precision and recall.
+
+**Other theft**
+
+- Model captures a good number of theft cases ( high recall ) but precision is moderate
+
+the Others classes have poor performance , likely due to low support and Class imbalance issues.
+
+
+[I was aware of the classes not being well balanced and I tried with some OVer Sampling methods but they were very heavy from a computational point of view and it crashed during execution, so I opted to change the model from Logistic Regression to one like LightGBM which was better suited for my type of dataset but without obtaining great results ]
+
+
+
