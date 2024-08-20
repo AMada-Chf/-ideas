@@ -58,6 +58,11 @@ data taken from : DATA.GOV
   * ora faremo due cose :
       - 1) preprocessing dei dati : ( dimensionality reduction + Data Pruning )
            ovvero ridurre il numero di features e il numero di osservazioni rindondanti
-      -2) una volta fatto andremo a riprovare ad utilizzare una tecnica di Bilnciamneto di Over-sampling come SMOTE 
+      -2) una volta fatto andremo a riprovare ad utilizzare una tecnica di Bilnciamneto di Over-sampling come SMOTE
+
+ file : Crimini_6_prova_risoluzione_errori
+
+ * sistemato errori che stampava
+ * deciso di utilizzare un altro modello di ML più appropriato per dataset con alta dimenisonalità e numerose osservazioni chiamato LIGHTGBM , le performance sono leggermente migliorate. 
   
 
