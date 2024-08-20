@@ -1,4 +1,4 @@
-file : crimini_2_ispezioneDataset.py
+**file : crimini_2_ispezioneDataset.py**
 
 objective: predict the type of crime that was committed based on the features. data taken from : DATA.GOV
 
@@ -8,43 +8,54 @@ dataset downloaded from Data.gov relating to Crime Data from 2020 to Present by 
 
 This is a draft code, the code and model need to be improved. In fact, forecasting performances are very low
 
-sub file : crimini_3_ottimizzazione.py
- - same code in which I included an optimization of a parameter of the chosen model, namely Logistic Regression to increase performance
+    **sub file : crimini_3_ottimizzazione.py**
+    - same code in which I included an optimization of a parameter of the chosen model, namely Logistic Regression to 
+      increase performance
 
-sub file : Crimini_4_confrontoModelliML
- in this file I tried to compare 3 different classification models:
- -logistic Regression 
- -KNeighborsRanking
- -DecisionTreeClassifier
+    **sub file : Crimini_4_confrontoModelliML**
+      in this file I tried to compare 3 different classification models:
+      -logistic Regression 
+      -KNeighborsRanking
+      -DecisionTreeClassifier
 
- to see if the low performance problem was due to the algorithm used,
-  but not having found a good match, I will go back to clean the data in a better way.
-     In the next files I will handle missing values ​​with imputation and probably perform a balancing of the dataset, because some classes have a significantly lower 
-     number of observations than others, and the model is not able to predict them
+      to see if the low performance problem was due to the algorithm used,
+      but not having found a good match, I will go back to clean the data in a better way.
+      In the next files I will handle missing values ​​with imputation and probably perform a balancing of the dataset, 
+      because 
+      some classes have a significantly lower number of observations than others, and the model is not able to predict them
 
- Alcuni metodi di bilanciamento richiedono uno sforzo computazionale troppo elevato a causa del grosso numero di osservazioni nel dataframe (circa 1 milione)
- - ripartiamo da un Pre Processing dei dati
-      Gestione dati mancanti per ciascuna colonna del dataframe, abbiamo notato che
-          *Weapon Category ha 600000 righe con valori mancanti (circa 63% del dataset)
-          *Victim Sex & Victim Descent circa 132500 valori mancanti ( circa il 14% del dataset)
+
+      Some balancing methods require too much computational effort due to the large number of observations in the dataframe 
+      (around 1 million)
+       - let's start from a Pre Processing of the data
+      Handling missing data for each column of the dataframe, we noticed that
+          *Weapon Category has 600000 rows with missing values ​​(about 63% of the dataset)
+          *Victim Sex & Victim Descent approximately 132500 missing values ​​(approximately 14% of the dataset)
 
        Visto che è molto frequente che un crimine si svolga senza armi ho deciso di fare un imputazione di questo tipo :
         data['Weapon Category'].fillna('No Weapon', inplace=True)
 
-       Per victim sex le possibili scelte ['M' 'X' 'F' nan 'H' '-'] , dove X è unknown , mentre H, nan , - , le inputo come no Victim
+       Per victim sex le possibili scelte ['M' 'X' 'F' nan 'H' '-'] , dove X è unknown , mentre H, nan , - , le inputo come 
+       'no Victim'
+
+       Since it is very common for a crime to take place without weapons, I decided to make an imputation of this type:
+        data['Weapon Category'].fillna('No Weapon', inplace=True)
+
+       For victim sex the possible choices are ['M' 'X' 'F' nan 'H' '-'], where X is unknown, while for H, Nan, - , i have 
+        inputated in 'no Victim'
+
         data['Victim Sex'].fillna('no Vict', inplace=True)
         data['Victim Sex'].replace('-', 'no Vict', inplace=True)
         data['Victim Sex'].replace('H', 'no Vict', inplace=True)
 
-       Per victim Descent le possibili scelte , dove nan, - le inputo come no Vict
-        data['Victim Sex'].fillna('no Vict', inplace=True)
-        data['Victim Sex'].replace('-', 'no Vict', inplace=True)
-file : crimini_5_Bilanciamento_giusto.py
+       
+**file: crimes_5_Balanciamento_giusto.py**
 
-abbiamo apportato le imputazioni ma le performance sono rimaste basse
-ora faremo due cose :
-preprocessing dei dati : ( dimensionality reduction + Data Pruning ) ovvero ridurre il numero di features e il numero di osservazioni rindondanti -2) una volta fatto andremo a riprovare ad utilizzare una tecnica di Bilnciamneto di Over-sampling come SMOTE
-file : Crimini_6_prova_risoluzione_errori
+we made the inputations but the performance remained low
+now we will do two things:
+data preprocessing: (dimensionality reduction + Data Pruning)  reducing the number of features and the number of redundant observations -2) once done we will try again to use an Over-sampling Balancing technique such as SMOTE
 
-sistemato errori che stampava
-deciso di utilizzare un altro modello di ML più appropriato per dataset con alta dimenisonalità e numerose osservazioni chiamato LIGHTGBM , le performance sono leggermente migliorate.
+**file : Crimini_6_prova_risoluzione_errori**
+
+- fixed printing errors
+decided to use another ML model more appropriate for datasets with high dimensionality and numerous observations called LIGHTGBM, the performance improved slightly.
