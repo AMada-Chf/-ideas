@@ -1,4 +1,4 @@
-currently, two small projects
+Currently, two small projects
 
 1) P_Value & Sharpe Ratio
 2) Classification Machine Learning problem 
