@@ -32,12 +32,6 @@ This is a draft code, the code and model need to be improved. In fact, forecasti
           *Weapon Category has 600000 rows with missing values ​​(about 63% of the dataset)
           *Victim Sex & Victim Descent approximately 132500 missing values ​​(approximately 14% of the dataset)
 
-       Visto che è molto frequente che un crimine si svolga senza armi ho deciso di fare un imputazione di questo tipo :
-        data['Weapon Category'].fillna('No Weapon', inplace=True)
-
-       Per victim sex le possibili scelte ['M' 'X' 'F' nan 'H' '-'] , dove X è unknown , mentre H, nan , - , le inputo come 
-       'no Victim'
-
        Since it is very common for a crime to take place without weapons, I decided to make an imputation of this type:
         data['Weapon Category'].fillna('No Weapon', inplace=True)
 
