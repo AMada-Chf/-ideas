@@ -2,7 +2,7 @@
 
 **objective**: Validation of an Algo Trading strategy.
 
-- Import of a CSV with monthly returns of an Algotrading strategy
+- Import of a CSV with monthly returns of an Algotrading strategy, called " rendimenti_Algo"
 - Graph distribution of returns to get an idea
 - perform T-TEST with P-Value with 5% confidence level (on the average of the returns)
     - H0 : returns = 0
