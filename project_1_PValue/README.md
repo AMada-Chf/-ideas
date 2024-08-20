@@ -7,7 +7,9 @@
 - perform T-TEST with P-Value with 5% confidence level (on the average of the returns)
     - H0 : returns = 0
     - HA : yields > 0
-  
+
+**objective** : evaluate the risk-adjusted performance of a portfolio or investment strategy compared to a risk-free asset, such as government bonds  
+
 - Calculate SHARPE RATIO (algo trading vs Government Bonds)
   
 It is possible that there are errors, available to receive advice and corrections 😊
