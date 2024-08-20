@@ -18,7 +18,7 @@ It is possible that there are errors, available to receive advice and correction
 
 **RESULTS**
 
-- **p-value** is  < 0.05, you reject the null hypothesis and conclude that there is sufficient statistical evidence  to state that the returns are not random and differ significantly from zero.
+- **p-value** is  < 0.05, you reject the null hypothesis and conclude that there is sufficient statistical evidence  to state that the returns are not random and differ significantly from zero.   (p-value: 0.0176)
 
 
 
